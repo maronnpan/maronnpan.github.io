@@ -1,0 +1,135 @@
+/* ==========================================
+   全体の設定（背景色や文字の基本）
+   ========================================== */
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #faf6f0; /* 温かみのあるミルク色の背景 */
+  color: #4a3b32;           /* 真っ黒ではなく、優しいダークブラウンの文字 */
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px 20px;
+  max-width: 800px;         /* 画面が大きくなりすぎないように制限 */
+  margin: 0 auto;           /* 画面の中央に配置 */
+}
+
+/* リンクのデザイン */
+a {
+  color: #e57373;           /* おしゃれなサーモンピンク */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #ffb74d;           /* マウスを乗せたときはオレンジに */
+  text-decoration: underline;
+}
+
+/* ==========================================
+   ヘッダー（名前と画像）
+   ========================================== */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #bd8c60;           /* マロンパンのような美味しそうなブラウン */
+  margin-bottom: 10px;
+}
+
+/* プロフィール画像 */
+img {
+  display: block;
+  margin: 0 auto 30px auto; /* 中央寄せ */
+  width: 150px;             /* 好みのサイズに調整してください */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;       /* 画像をきれいな丸型に切り抜く */
+  border: 4px solid #fff;   /* 白い枠線をつける */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ほんのり影をつけて立体的に */
+}
+
+/* Aboutの紹介文 */
+h2 + p {
+  text-align: center;
+  font-size: 1.1rem;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   見出し（h2, h3）をカラフルにする設定
+   ========================================== */
+h2 {
+  color: #bd8c60;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.8rem;
+}
+
+/* h3共通：左側に太い縦線を入れる */
+h3 {
+  padding: 5px 15px;
+  margin-top: 35px;
+  font-size: 1.3rem;
+  border-left: 6px solid #ccc; /* 基本の線 */
+  background: rgba(255, 255, 255, 0.5); /* うっすら背景を白く */
+  border-radius: 0 8px 8px 0;
+}
+
+/* 見出しごとに色をカラフルに変える（登場する順番に色を指定） */
+h3:nth-of-type(1) { border-left-color: #ff8a80; color: #c62828; } /* Profile：ピンク赤 */
+h3:nth-of-type(2) { border-left-color: #4fc3f7; color: #0277bd; } /* Skills：爽やかブルー */
+h3:nth-of-type(3) { border-left-color: #81c784; color: #2e7d32; } /* Works：優しいグリーン */
+h3:nth-of-type(4) { border-left-color: #ffb74d; color: #ef6c00; } /* Contact：元気なオレンジ */
+h3:nth-of-type(5) { border-left-color: #ba68c8; color: #6a1b9a; } /* History：おしゃれパープル */
+h3:nth-of-type(6) { border-left-color: #ffd54f; color: #f9a825; } /* Open Processing：イエロー */
+
+/* ==========================================
+   リストとテーブル（表）を整える
+   ========================================== */
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 8px;
+}
+
+/* 表のデザインをおしゃれに */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f7ede2; /* 表の見出し部分の背景色 */
+  color: #8d5b4c;
+  width: 30%;
+  font-weight: bold;
+}
+
+tr:last-child th, tr:last-child td {
+  border-bottom: none; /* 一番下の線は消す */
+}
+
+/* ==========================================
+   Open Processing（埋め込み）の調整
+   ========================================== */
+iframe {
+  display: block;
+  margin: 15px auto 0 auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 100%; /* スマホでもはみ出さないように */
+}
